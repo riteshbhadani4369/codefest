@@ -57,7 +57,7 @@ a {
 }
 
 .header .logo {
-	width: 8rem;
+	width: 6rem;
 }
 
 .navbar-list {
@@ -112,13 +112,13 @@ a {
 	}
 
 	.header .logo {
-		width: 20%;
+		width: 40%;
 	}
 
 	.navbar {
 		width: 100%;
 		height: 100vh;
-		background: #000000b6;
+		background: #000000d7;
 		position: absolute !important;
 		top: 0;
 		left: 0;
@@ -157,7 +157,7 @@ a {
 
 	.navbar li a button {
 		padding: 20px;
-		background-color: #BD2528;
+		background-color: #ffa323;
 		border: none;
 		color: white;
 		text-transform: uppercase;
@@ -166,7 +166,7 @@ a {
 }
 
 .slider {
-	background-image: linear-gradient(rgba(0, 0, 0, 0.8), rgba(0, 0, 0, 0.8)), url("./bg1.jpg");
+	background-image: linear-gradient(rgba(0, 0, 0, 0.8), rgba(0, 0, 0, 0.8)), url("./ss2.jpg");
 	background-repeat: no-repeat;
 	background-size: cover;
 	height: 100vh;
@@ -189,7 +189,7 @@ a {
 }
 
 .slider-text h4::before {
-	content: "Foody_Restaurent";
+	content: "Statue_Of_Unity";
 	color: #ffa323;
 	width: 100%;
 	position: absolute;
@@ -228,6 +228,17 @@ a {
 	margin-top: 20px;
 }
 
+@media (max-width:768px) {
+	.slider-text h4 {
+		font-size: 25px !important;
+		letter-spacing: 5px;
+	}
+
+	.slider-text button {
+		padding: 5px 15px;
+	}
+}
+
 /* ----------------------------------------------------------------------------------------------------------------
 														about foody restaurent
 ------------------------------------------------------------------------------------------------------------------*/
@@ -264,7 +275,7 @@ a {
 													menu parallax
 ------------------------------------------------------------------------------------------------------------------*/
 .parallax {
-	background-image: linear-gradient(rgba(0, 0, 0, 0.8), rgba(0, 0, 0, 0.8)), url("./parallax.jpg");
+	background-image: linear-gradient(rgba(0, 0, 0, 0.8), rgba(0, 0, 0, 0.8)), url("./bg1.jpg");
 	background-attachment: fixed;
 	background-size: cover;
 	width: 100%;
@@ -332,45 +343,36 @@ a {
 	padding: 100px 0;
 }
 
-.breakfast {
-	position: relative;
+.tour-box {
+	box-shadow: rgba(0, 0, 0, 0.1) 0px 4px 12px;
+	padding: 10px;
+	transition: all ease 0.5s;
 }
 
-.breakfast h2 {
-	font-size: 26px;
+.tour-box:hover{
+	transform: translateY(-20px);
+}
+.tour-box img {
+	width: 100%;
+	height: 300px;
+	margin-bottom: 20px;
+}
+
+.tour-box h3 {
+	margin-bottom: 20px;
+	text-transform: capitalize;
 	font-weight: 500;
-	color: #444;
-	margin: 20px 0;
+	letter-spacing: 1.2px;
+	font-size: 20px;
+	padding: 0 10px;
 }
 
-.breakfast hr {
-	height: 25px;
-	width: 70px;
-	text-align: center;
-	margin: 1rem auto;
-	color: #ffa323;
-	border: 0;
-	border-top: 3px solid #ffa323;
-	opacity: 1;
-}
-
-.dish {
-	border-bottom: 2px dotted #ccc;
-	margin-top: 50px;
-}
-
-.dish h4 {
-	font-weight: 600;
-	font-size: 17px;
-	color: #555;
-}
-
-.breakfast p {
-	text-align: left;
-	font-style: italic;
+.tour-box p {
 	font-size: 15px;
-	font-weight: 300;
+	padding: 0 10px;
 }
+
+
 
 @media (max-width:768px) {
 	.breakfast h2 {
@@ -383,7 +385,7 @@ a {
 ------------------------------------------------------------------------------------------------------------------*/
 
 .parallax1 {
-	background-image: linear-gradient(rgba(0, 0, 0, 0.8), rgba(0, 0, 0, 0.8)), url("./gallery-bg.jpg");
+	background-image: linear-gradient(rgba(0, 0, 0, 0.8), rgba(0, 0, 0, 0.8)), url("./ss4.jpg");
 	background-attachment: fixed;
 	background-size: cover;
 	width: 100%;
@@ -555,6 +557,10 @@ textarea {
 	letter-spacing: 1.5px;
 	font-size: 15px;
 	font-weight: 200;
+}
+
+.footer input {
+	padding: 10px 20px;
 }
 
 @media (max-width:768px) {
