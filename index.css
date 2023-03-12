@@ -1,0 +1,564 @@
+@import url('https://fonts.googleapis.com/css2?family=Kanit:wght@100;200;300;400;500;600;700;800&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Miss+Fajardose&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@100;200;300;500;600;700;800;900&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Dancing+Script:wght@400;600&display=swap');
+
+/* ---------------------------------------------------------------------------------------------------------------
+														default css
+----------------------------------------------------------------------------------------------------------------- */
+* {
+	margin: 0;
+	padding: 0;
+	box-sizing: border-box;
+}
+
+html {
+	overflow-x: hidden;
+	scroll-behavior: smooth;
+}
+
+body {
+	overflow-x: hidden;
+	font-family: 'Poppins', sans-serif !important;
+}
+
+ul {
+	margin: 0 !important;
+	padding: 0;
+	list-style: none;
+}
+
+a {
+	text-decoration: none !important;
+	color: rgb(255, 255, 255) !important;
+}
+
+.flex {
+	display: flex;
+	align-items: center;
+	justify-content: space-between;
+}
+
+
+/* ----------------------------------------------------------------------------------------------------------------
+														Header menu
+------------------------------------------------------------------------------------------------------------------ */
+.header {
+	/* background-color: transparent; */
+	padding: 0 4.8rem;
+	height: 5rem;
+	position: fixed;
+	top: 0;
+	left: 0;
+	width: 100%;
+	z-index: 10000;
+	box-shadow: 0 1px 20px rgba(0, 0, 0, 1);
+	background-color: rgba(0, 0, 0, 0.7);
+}
+
+.header .logo {
+	width: 8rem;
+}
+
+.navbar-list {
+	display: flex;
+	list-style: none;
+}
+
+.navbar-list li a {
+	font-size: 16px;
+	padding: 10px 30px;
+	text-decoration: none;
+	font-family: 'Kanit', sans-serif;
+	line-height: 2px;
+	letter-spacing: 1.5px;
+	text-transform: uppercase;
+	transition: 0.5s ease;
+}
+
+.navbar li a button {
+	padding: 20px 40px;
+	background-color: #ffa323;
+	border: none;
+	color: white;
+	text-transform: uppercase;
+	font-size: 15px;
+}
+
+.navbar-list li a:hover {
+	color: #ffa323 !important;
+}
+
+.mobile-navbar {
+	display: none;
+	background: transparent;
+	cursor: pointer;
+}
+
+.mobile-menu {
+	color: #fff;
+	font-size: 20px;
+}
+
+.mobile-menu[name="close-menu"] {
+	display: none;
+}
+
+@media (max-width:768px) {
+
+	.mobile-navbar {
+		display: block;
+		z-index: 999;
+	}
+
+	.header .logo {
+		width: 20%;
+	}
+
+	.navbar {
+		width: 100%;
+		height: 100vh;
+		background: #000000b6;
+		position: absolute !important;
+		top: 0;
+		left: 0;
+		display: flex !important;
+		align-items: center !important;
+		justify-content: center !important;
+
+		transform: translateX(100%);
+		transition: all 0.5s linear;
+		opacity: 0;
+		visibility: hidden;
+	}
+
+	.navbar-list {
+		flex-direction: column;
+		align-items: center;
+	}
+
+	.active .navbar {
+		transform: translateX(0);
+		opacity: 1;
+		visibility: visible;
+	}
+
+	.active .mobile-navbar .mobile-menu[name="close-menu"] {
+		display: block;
+	}
+
+	.active .mobile-navbar .mobile-menu[name="menu-hamburger"] {
+		display: none;
+	}
+
+	.navbar li {
+		padding: 10px 0;
+	}
+
+	.navbar li a button {
+		padding: 20px;
+		background-color: #BD2528;
+		border: none;
+		color: white;
+		text-transform: uppercase;
+		font-size: 15px;
+	}
+}
+
+.slider {
+	background-image: linear-gradient(rgba(0, 0, 0, 0.8), rgba(0, 0, 0, 0.8)), url("./bg1.jpg");
+	background-repeat: no-repeat;
+	background-size: cover;
+	height: 100vh;
+	width: 100%;
+}
+
+.slider-text {
+	display: flex;
+	align-items: center;
+	flex-direction: column;
+	justify-content: center;
+	height: 100vh;
+}
+
+.slider-text h4 {
+	position: relative;
+	color: #fff;
+	font-size: 50px !important;
+	letter-spacing: 8px;
+}
+
+.slider-text h4::before {
+	content: "Foody_Restaurent";
+	color: #ffa323;
+	width: 100%;
+	position: absolute;
+	top: 0;
+	left: 0;
+	border-right: 2px solid #ffa323;
+	animation-name: abcf;
+	animation-duration: 5s;
+	animation-iteration-count: infinite;
+	animation-timing-function: ease-in-out;
+	overflow: hidden;
+	height: 100%;
+}
+
+@keyframes abcf {
+	0% {
+		width: 0%;
+	}
+
+	50% {
+		width: 100%;
+	}
+
+	100% {
+		width: 0%;
+	}
+}
+
+.slider-text button {
+	padding: 10px 20px;
+	background-color: #ffa323;
+	color: #fff;
+	border: none;
+	border-radius: 2px;
+	text-transform: uppercase;
+	margin-top: 20px;
+}
+
+/* ----------------------------------------------------------------------------------------------------------------
+														about foody restaurent
+------------------------------------------------------------------------------------------------------------------*/
+.about-foody {
+	padding: 100px 0;
+	text-align: center;
+	position: relative;
+}
+
+.about-foody h2 {
+	text-transform: capitalize;
+	font-size: 50px;
+	margin-bottom: 20px;
+}
+
+.about-foody p {
+	text-transform: capitalize;
+}
+
+.about-foody span {
+	position: absolute;
+	top: 45px;
+	left: -80px;
+	right: 0;
+	font-size: 100px;
+	margin: 0;
+	color: #ffa323;
+	line-height: 1;
+	font-family: 'Miss Fajardose', cursive;
+	z-index: -1;
+}
+
+/* ----------------------------------------------------------------------------------------------------------------
+													menu parallax
+------------------------------------------------------------------------------------------------------------------*/
+.parallax {
+	background-image: linear-gradient(rgba(0, 0, 0, 0.8), rgba(0, 0, 0, 0.8)), url("./parallax.jpg");
+	background-attachment: fixed;
+	background-size: cover;
+	width: 100%;
+	height: 300px;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+}
+
+.parallax h2 {
+	color: #fff;
+	position: relative;
+	font-size: 30px;
+	text-transform: uppercase;
+	letter-spacing: 2px;
+}
+
+.parallax h2::before {
+	content: '';
+	position: absolute;
+	top: 110%;
+	left: 0;
+	/* cursor: pointer; */
+	width: 90px;
+	height: 2px;
+	background-color: #ffa323;
+	transform: translateY(-50%);
+
+	animation-name: abc;
+	animation-duration: 1s;
+	animation-iteration-count: infinite;
+	animation-timing-function: ease-in-out;
+	animation-direction: reverse;
+}
+
+@keyframes abc {
+	0% {
+		width: 90px;
+	}
+
+	50% {
+		width: 80px;
+	}
+
+	100% {
+		width: 70px;
+	}
+}
+
+@keyframes animate {
+	0% {
+		width: 100px;
+	}
+
+	50% {
+		width: 200;
+	}
+
+	100% {
+		width: 100px;
+	}
+}
+
+.restaurent-menu {
+	padding: 100px 0;
+}
+
+.breakfast {
+	position: relative;
+}
+
+.breakfast h2 {
+	font-size: 26px;
+	font-weight: 500;
+	color: #444;
+	margin: 20px 0;
+}
+
+.breakfast hr {
+	height: 25px;
+	width: 70px;
+	text-align: center;
+	margin: 1rem auto;
+	color: #ffa323;
+	border: 0;
+	border-top: 3px solid #ffa323;
+	opacity: 1;
+}
+
+.dish {
+	border-bottom: 2px dotted #ccc;
+	margin-top: 50px;
+}
+
+.dish h4 {
+	font-weight: 600;
+	font-size: 17px;
+	color: #555;
+}
+
+.breakfast p {
+	text-align: left;
+	font-style: italic;
+	font-size: 15px;
+	font-weight: 300;
+}
+
+@media (max-width:768px) {
+	.breakfast h2 {
+		margin-top: 50px;
+	}
+}
+
+/* ----------------------------------------------------------------------------------------------------------------
+													Gallery
+------------------------------------------------------------------------------------------------------------------*/
+
+.parallax1 {
+	background-image: linear-gradient(rgba(0, 0, 0, 0.8), rgba(0, 0, 0, 0.8)), url("./gallery-bg.jpg");
+	background-attachment: fixed;
+	background-size: cover;
+	width: 100%;
+	height: 300px;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+}
+
+.parallax1 h2 {
+	color: #fff;
+	position: relative;
+	font-size: 30px;
+	text-transform: uppercase;
+	letter-spacing: 2px;
+}
+
+.parallax1 h2::before {
+	content: '';
+	position: absolute;
+	top: 110%;
+	left: 0;
+	width: 135px;
+	height: 2px;
+	background-color: #ffa323;
+}
+
+.gallery-view {
+	padding: 20px 20px 50px 20px;
+	width: 100%;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	flex-direction: column;
+	background-color: #eeeeee3d;
+}
+
+.gallery-view ul {
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	flex-wrap: wrap;
+	margin-bottom: 30px !important;
+	margin-top: 10px !important;
+}
+
+.gallery-view ul li {
+	padding: 12px 20px;
+	background-color: #eee;
+	margin: 5px;
+	letter-spacing: 1px;
+	cursor: pointer;
+	text-transform: capitalize;
+}
+
+.gallery-view ul li.active {
+	background-color: #ffa323;
+	color: #fff;
+}
+
+.product {
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	flex-wrap: wrap;
+}
+
+.itembox {
+	position: relative;
+	width: 400px;
+	height: 300px;
+	margin: 5px;
+	display: block;
+}
+
+.itembox.hide {
+	display: none;
+}
+
+.itembox img {
+	position: absolute;
+	top: 0;
+	left: 0;
+	width: 100%;
+	height: 100%;
+	object-fit: cover;
+	filter: brightness(70%);
+}
+
+/* ----------------------------------------------------------------------------------------------------------------
+													contact
+------------------------------------------------------------------------------------------------------------------*/
+.cotact {
+	padding: 50px 0;
+}
+
+.contact-form h2 {
+	line-height: 1.5;
+	color: #333333;
+	font-weight: 700;
+	margin-bottom: 40px;
+}
+
+.contact-form-input {
+	display: flex;
+	align-items: center;
+	flex-direction: column;
+}
+
+.contact-form-input input,
+textarea {
+	width: 100%;
+	padding: 10px 20px;
+	margin: 10px;
+}
+
+.contact-form-input button {
+	text-transform: capitalize;
+	padding: 12px 20px;
+	background-color: #ffa323;
+	color: #fff;
+	border: none;
+	margin-top: 10px;
+	width: 100%;
+	transition: 1s ease;
+}
+
+.cotact iframe {
+	height: 500px;
+	width: 600px;
+}
+
+.contact-form-input button:hover {
+	background-color: #fff;
+	color: #ffa323;
+	border: 2px solid #ffa323;
+}
+
+@media (max-width:768px) {
+
+	.cotact iframe {
+		height: 400px;
+		margin-top: 50px;
+		width: 100%;
+	}
+}
+
+/* ----------------------------------------------------------------------------------------------------------------
+													footer
+------------------------------------------------------------------------------------------------------------------*/
+.footer {
+	background-color: #333;
+	color: #fff;
+	padding: 50px 0;
+	text-align: center;
+	border-bottom: 5px solid #ffa323;
+}
+
+.footer h3 {
+	color: #ffa323;
+	font-weight: 400;
+	font-size: 18px;
+	text-transform: uppercase;
+	margin-bottom: 20px;
+	letter-spacing: 1.5px;
+}
+
+.footer p {
+	letter-spacing: 1.5px;
+	font-size: 15px;
+	font-weight: 200;
+}
+
+@media (max-width:768px) {
+	.footer-address {
+		margin-bottom: 20px;
+	}
+}
